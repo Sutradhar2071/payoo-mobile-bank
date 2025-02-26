@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-slate-800">
+    <section class="bg-gray-200 min-h-screen max-w-md p-6 mx-auto">
+        <header>
+
+            <!-- navbar section -->
+
+            <nav class="flex justify-around items-center">
+                <img src="assets/Group.png" alt="">
+                <div>
+                    <h1 class="text-xl font-semibold">$<span id="balane-main">4500</span></h1>
+                    <p class="text-gray-500">Available Balance</p>
+                </div>
+                <button class="btn btn-outline">Logout</button>
+            </nav>
+            
+            <!-- welcome section -->
+
+            <section class="mt-10">
+                <h1 class="font-bold text-xl">🔥 Welcome to Payooo!</h1>
+                <p class="text-gray-500">Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+            </section>
+            
+            <!-- card section -->
+
+             <section class="grid grid-cols-3 gap-5 mt-10">
+                <div id="add-money" class="border p-4 text-center rounded-sm">
+                <img class="mx-auto w-8" src="assets/wallet1.png" alt="">
+                <p>Add Money</p>
+                </div>
+                <div id="cashout-money" class="border p-4 text-center rounded-sm">
+                <img class="mx-auto w-8" src="assets/send1.png" alt="">
+                <p>Cash Out</p>
+                </div>
+                <div class="border p-4 text-center rounded-sm">
+                <img class="mx-auto w-8" src="assets/money1.png" alt="">
+                <p>Pay Bill</p>
+                </div>
+                <div class="border p-4 text-center rounded-sm">
+                <img class="mx-auto w-8" src="assets/purse1.png" alt="">
+                <p>Transfer Money </p>
+                </div>
+                <div class="border p-4 text-center rounded-sm">
+                <img class="mx-auto w-8" src="assets/bonus1.png" alt="">
+                <p>Get Bonus</p>
+                </div>
+                <div class="border p-4 text-center rounded-sm">
+                <img class="mx-auto w-8" src="assets/transaction1.png" alt="">
+                <p>Transaction History</p>
+                </div>
+             </section>
+
+             <!-- add money section -->
+              
+             <section id="addmoney">
+                <h1 class="font-bold text-xl text-center mt-4">Add Money</h1>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse"> 
+                      <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                          <legend class="font-bold text-xl">Select a BANK</legend>
+                          <select class="select">
+                                <option disabled selected>Select Bank</option>
+                                <option>Bkash</option>
+                                <option>Nagad</option>
+                                <option>DBBL</option>
+                          </select>
+                          <form class="fieldset">
+                           
+                            <label class="font-bold text-xl">Mobile Number</label>
+                            <input type="number" id="account-number" class="input" value="01911041674" required placeholder="Enter Your Number" />
+                            <label  class="font-bold text-xl">Amount to Add</label>
+                            <input type="number" id="main-balance" class="input" required placeholder="Add Balance" />
+                            <label class="font-bold text-xl">4 Digit PIN</label>
+                            <input type="text" id="account-pin" required value="1234" class="input" placeholder="Enter 4 Digit PIN" />
+                            <button id="add-money-btn" class="btn btn-neutral bg-blue-800 rounded-2xl mt-4">Add Money</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             </section>
+
+             <!-- cashout section -->
+
+             <section id="cashout">
+                <h1 class="font-bold text-xl text-center mt-4">Cash OUt</h1>
+                <div class="">
+                    <div class="hero-content flex-col lg:flex-row-reverse"> 
+                      <div class="card  w-full max-w-sm shrink-0 shadow-2xl">
+                        <div class="card-body">
+                          <form class="fieldset">  
+                            <label class="font-bold text-xl">Agent Number</label>
+                            <input type="number" id="account-number" class="input" value="01911041674" required placeholder="Enter 11 Digit Number" />
+                            <label  class="font-bold text-xl">Cash Out Amount</label>
+                            <input type="number" id="main-balance-cashout" class="input" required placeholder="Enter Amount to Withdraw" />
+                            <label class="font-bold text-xl">4 Digit PIN</label>
+                            <input type="text" id="account-pin" required value="1234" class="input" placeholder="Enter 4 Digit PIN" />
+                            <button id="cash-money-btn" class="btn btn-neutral bg-blue-800 rounded-2xl mt-4">Withraw Money</button>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+             </section>
+        </header>
+    </section>
+
+    <script src="script/addmoney.js"></script>
+    <script src="script/toggle.js"></script>
+    <script src="script/cashout.js"></script>
+</body>
+</html>
