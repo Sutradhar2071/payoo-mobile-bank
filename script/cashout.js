@@ -12,6 +12,17 @@ document.getElementById('cash-money-btn')
         const odd = convertedMainBalanceMain - convertedcashoutBalance;
         // document.getElementById('balane-main').innerText = odd;
         document.getElementById('balane-main').innerText = odd;
+
+        const container = document.getElementById
+        ('transaction-container')
+
+        const div = document.createElement ('div')
+        div.classList.add('bg-red-400');
+        div.innerHTML =div.innerHTML = `
+        <h1 class = "text-xl font-semibold">Withdraw Money</h1>
+        <h3>${convertedcashoutBalance} dollar</h3>
+    `;
+        container.appendChild(div);
     }
 
     else{
